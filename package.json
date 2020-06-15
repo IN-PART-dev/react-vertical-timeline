@@ -1,5 +1,5 @@
 {
-  "name": "react-vertical-timeline-component",
+  "name": "@in-part-dev/react-vertical-timeline-component",
   "description": "Vertical timeline for React.js",
   "author": "Stéphane Monnot",
   "user": "stephane-monnot",
@@ -17,8 +17,7 @@
     "dist:modules": "del-cli ./dist-modules && cross-env BABEL_ENV=modules babel ./src --out-dir ./dist-modules",
     "preversion": "npm run test && npm run test:lint",
     "prepublishOnly": "npm run dist:es6 && npm run dist:modules && npm run dist:css",
-    "postpublish": "npm run gh-pages && npm run gh-pages:deploy",
-    "postinstall": "node lib/post_install.js"
+    "postpublish": "npm run gh-pages && npm run gh-pages:deploy"
   },
   "main": "dist-modules",
   "module": "dist-es6",
@@ -106,5 +105,10 @@
     "classnames": "^2.2.6",
     "prop-types": "^15.7.2",
     "react-intersection-observer": "^8.26.2"
-  }
+  },
+  "browserslist": [
+    "last 2 versions",
+    "> 1%",
+    "IE 11"
+  ]
 }
